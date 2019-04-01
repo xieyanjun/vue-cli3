@@ -80,7 +80,7 @@ export default {
   mounted() {},
   methods:{
       submit(){
-          console.log(this.tinymceHtml)
+          // console.log(this.tinymceHtml)
       }
   }
   //   methods:{

@@ -4,7 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-  <el-container style="height: 100%; border: 1px solid #eee">
+  <el-container style="height: 500px; border: 1px solid #eee">
     <el-aside width="200px">
       <el-menu :default-openeds="['1', '3']">
         <el-submenu index="1">
@@ -28,10 +28,9 @@
     <!-- <el-header>header</el-header> -->
     <el-main>
       <el-header>Header</el-header>
-      <router-view/>
     </el-main>
   </el-container>
-    
+    <!-- <router-view/> -->
   </div>
 </template>
 

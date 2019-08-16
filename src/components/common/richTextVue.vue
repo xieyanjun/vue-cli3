@@ -1,12 +1,9 @@
-
 <template>
   <div>
     <editor id="‘tinymce‘" v-model="tinymceHtml" :init="init"></editor>
     <button @click="submit">click</button>
   </div>
-  
 </template>
-
 
 <script>
 // import "@/assets/langs/zh_CN.js";
@@ -31,8 +28,8 @@ export default {
           "styleselect | fontselect | formatselect | fontsizeselect | forecolor backcolor | bold italic underline strikethrough | image  media | table | alignleft aligncenter alignright alignjustify | outdent indent | numlist bullist | preview removeformat  hr | paste code  link | undo redo | fullscreen ",
         toolbar:
           "bold italic underline strikethrough | fontsizeselect | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent blockquote | undo redo | link unlink image code | removeformat paste preview",
-          file_picker_types: 'image',
-        file_picker_callback: function(cb, value, meta) {
+        file_picker_types: "image",
+        file_picker_callback: function(cb) {
           var input = document.createElement("input");
           input.setAttribute("type", "file");
           input.setAttribute("accept", "image/*");
@@ -57,7 +54,7 @@ export default {
         paste_word_valid_elements: "*[*]", // word需要它
         paste_data_images: true, // 粘贴的同时能把内容里的图片自动上传，非常强力的功能
         paste_convert_word_fake_lists: true, // 插入word文档需要该属性
-        fontsize_formats: "10px 11px 12px 14px 16px 18px 20px 24px",
+        fontsize_formats: "10px 11px 12px 14px 16px 18px 20px 24px"
       },
       tinymceHtml: ""
     };
@@ -78,10 +75,10 @@ export default {
     }
   },
   mounted() {},
-  methods:{
-      submit(){
-          // console.log(this.tinymceHtml)
-      }
+  methods: {
+    submit() {
+      // console.log(this.tinymceHtml)
+    }
   }
   //   methods:{
   //       init() {
@@ -152,6 +149,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
-
+<style></style>

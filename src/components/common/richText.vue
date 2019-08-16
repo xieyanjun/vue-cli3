@@ -1,10 +1,8 @@
-
 <template>
   <div>
     <textarea :id="Id"></textarea>
   </div>
 </template>
-
 
 <script>
 import "@/assets/langs/zh_CN.js";
@@ -132,7 +130,7 @@ export default {
 
         // Image
         imagetools_toolbar:
-          "rotateleft rotateright | flipv fliph | editimage imageoptions",
+          "rotateleft rotateright | flipv fliph | editimage imageoptions"
       }
     };
   },
@@ -171,14 +169,14 @@ export default {
 
         // 挂载的DOM对象
         selector: `#${this.Id}`,
-        file_picker_types: 'image',
-  /* and here's our custom image picker*/
-  file_picker_callback: function (cb, value, meta) {
-    var input = document.createElement('input');
-    input.setAttribute('type', 'file');
-    input.setAttribute('accept', 'image/*');
+        file_picker_types: "image",
+        /* and here's our custom image picker*/
+        file_picker_callback: function(cb, value, meta) {
+          var input = document.createElement("input");
+          input.setAttribute("type", "file");
+          input.setAttribute("accept", "image/*");
 
-    /*
+          /*
       Note: In modern browsers input[type="file"] is functional without
       even adding it to the DOM, but that might not be the case in some older
       or quirky browsers like IE, so you might want to add it to the DOM
@@ -186,30 +184,31 @@ export default {
       once you do not need it anymore.
     */
 
-    input.onchange = function () {
-      var file = this.files[0];
+          input.onchange = function() {
+            var file = this.files[0];
 
-      var reader = new FileReader();
-      reader.onload = function () {
-        /*
+            var reader = new FileReader();
+            reader.onload = function() {
+              /*
           Note: Now we need to register the blob in TinyMCEs image blob
           registry. In the next release this part hopefully won't be
           necessary, as we are looking to handle it internally.
         */
-        var id = 'blobid' + (new Date()).getTime();
-        var blobCache =  window.tinymce.activeEditor.editorUpload.blobCache;
-        var base64 = reader.result.split(',')[1];
-        var blobInfo = blobCache.create(id, file, base64);
-        blobCache.add(blobInfo);
+              var id = "blobid" + new Date().getTime();
+              var blobCache =
+                window.tinymce.activeEditor.editorUpload.blobCache;
+              var base64 = reader.result.split(",")[1];
+              var blobInfo = blobCache.create(id, file, base64);
+              blobCache.add(blobInfo);
 
-        /* call the callback and populate the Title field with the file name */
-        cb(blobInfo.blobUri(), { title: file.name });
-      };
-      reader.readAsDataURL(file);
-    };
+              /* call the callback and populate the Title field with the file name */
+              cb(blobInfo.blobUri(), { title: file.name });
+            };
+            reader.readAsDataURL(file);
+          };
 
-    input.click();
-  },
+          input.click();
+        },
         setup: editor => {
           // 抛出 'on-ready' 事件钩子
           editor.on("init", () => {
@@ -228,6 +227,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
-
+<style></style>

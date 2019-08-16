@@ -5,12 +5,9 @@
 </template>
 <script>
 export default {
-  created(){
-    alert(this.$route.params.id)
+  created() {
+    alert(this.$route.params.id);
   },
-  mounted(){
-    
-  }
-}
+  mounted() {}
+};
 </script>
-

@@ -1,25 +1,23 @@
 <template>
   <div class="hello">
     <h3>Hello</h3>
-     <!-- <div><richText></richText></div> -->
-     <input value="">
+    <div><richText></richText></div>
+    <input value="" />
   </div>
-  
 </template>
 
 <script>
-import richText from "@/components/common/richTextVue.vue"
+import richText from "@/components/common/richTextVue.vue";
 export default {
-  components:{
+  components: {
     richText
   },
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: String
   },
-  methods:{
-  }
-}
+  methods: {}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

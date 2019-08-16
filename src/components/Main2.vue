@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="box">
     2
     <button @click="clickPush">点击跳转</button>
   </div>

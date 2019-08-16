@@ -10,6 +10,7 @@
           <el-menu-item index="1-3">选项3</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
+      
       <el-submenu index="2">
         <template slot="title"><i class="el-icon-message"></i>首页内容设置</template>
         <el-menu-item-group>
@@ -27,3 +28,12 @@
     </el-main>
   </el-container>
 </template>
+<style>
+  .el-main {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: left;
+    line-height: 0
+  }
+</style>
+

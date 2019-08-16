@@ -1,8 +1,10 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-     <div><richText></richText></div>
+    <h3>Hello</h3>
+     <!-- <div><richText></richText></div> -->
+     <input value="">
   </div>
+  
 </template>
 
 <script>

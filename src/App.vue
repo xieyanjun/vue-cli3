@@ -4,6 +4,10 @@
   </div>
 </template>
 
+<script>
+import "./assets/css/base.less";
+export default {};
+</script>
 <style>
 body {
   width: 100%;
@@ -38,7 +42,6 @@ body {
   background-color: #e9eef3;
   color: #333;
   text-align: center;
-  line-height: 160px;
   padding: 0 !important;
 }
 </style>

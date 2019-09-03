@@ -32,11 +32,13 @@
     </el-main>
   </el-container>
 </template>
-<style>
+<script>
+export default {};
+</script>
+<style lang="less" scoped>
 .el-main {
   background-color: #e9eef3;
   color: #333;
   text-align: left;
-  line-height: 0;
 }
 </style>

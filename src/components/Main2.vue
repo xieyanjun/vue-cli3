@@ -6,6 +6,7 @@
 </template>
 <script>
 export default {
+  mounted() {},
   methods: {
     clickPush() {
       this.$router.push({
@@ -18,3 +19,4 @@ export default {
   }
 };
 </script>
+<style scoped lang="less"></style>
